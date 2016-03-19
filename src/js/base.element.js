@@ -11,9 +11,9 @@ module.exports = function BaseElement (element) {
     }
     else {
         if (element === {}) { 
-        this.x = 0;
-        this.y = 0;  
-        this.isVisible = true;
+            this.x = 0;
+            this.y = 0;  
+            this.isVisible = true;
         }
         else {
             if (element.x === undefined) {
