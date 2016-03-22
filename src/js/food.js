@@ -2,7 +2,7 @@
 // code Olegnd
 
 //BaseElement = require('./js/base.element.js');
-
+//
 BaseElement.prototype.feed = function(){
     this.isVisible = false;
 }

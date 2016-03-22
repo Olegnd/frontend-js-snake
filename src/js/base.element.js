@@ -1,7 +1,7 @@
 'use strict';
 
-//code Olegnd 
-//version 2
+// code Olegnd 
+// version 2
 
 module.exports = function BaseElement(elements) {
 if (elements === undefined) {
@@ -20,7 +20,7 @@ else {
 };
 
 /*
-//version 1
+// version 1
 
 module.exports = function BaseElement (element) {
 if (element === undefined) { 
@@ -57,4 +57,5 @@ else {
 }
 };
 */
+
 

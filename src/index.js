@@ -10,3 +10,4 @@ console.log(new BaseElement(elements));
 console.log(new Food(new BaseElement(elements)));
 //console.log(new SnakePart());
 //console.log(new Snake());
+//
