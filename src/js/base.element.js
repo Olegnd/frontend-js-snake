@@ -3,18 +3,18 @@
 //code Olegnd 
 //version 2
 
-module.exports = function BaseElement (element) {
-if (element === undefined) {
+module.exports = function BaseElement(elements) {
+if (elements === undefined) {
     this.x = 0; this.y = 0; this.isVisible = true;
 }
 else {
-    if (element === {}) {
+    if (elements === {}) {
         this.x = 0; this.y = 0; this.isVisible = true;
     }
     else {    
-        element.x === undefined ? this.x = 0 : this.x = element.x; 
-        element.y === undefined ? this.y = 0 : this.y = element.y;
-        element.isVisible === undefined ? this.isVisible = true : this.isVisible = element.isVisible;
+        elements.x === undefined ? this.x = 0 : this.x = elements.x; 
+        elements.y === undefined ? this.y = 0 : this.y = elements.y;
+        elements.isVisible === undefined ? this.isVisible = true : this.isVisible = elements.isVisible;
     }
 }
 };
