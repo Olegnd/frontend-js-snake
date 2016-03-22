@@ -2,7 +2,14 @@
 // code Olegnd
 
 //BaseElement = require('./js/base.element.js');
-//
+
+module.exports = function Food(elements){
+    this.x = elements.x;
+    this.y = elements.y;
+    this.isVisible = false;
+}
+
+/*
 BaseElement.prototype.feed = function(){
     this.isVisible = false;
 }
