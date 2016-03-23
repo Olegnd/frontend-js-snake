@@ -5,7 +5,7 @@ function BaseElement(elements) {
     this.y = elements.y;
     this.isVisible = elements.isVisible; 
 }
-BaseElement.prototype.feed = function(elements){
+BaseElement.prototype.feed = function(){
                                 this.isVisible = false;
                              }
 
