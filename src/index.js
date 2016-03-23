@@ -12,7 +12,7 @@ console.log('specified in idex.js x = '+elements.x+',y = '+elements.y+',isVisibl
 //console.log('create object by constructor Base.Eletment in index.js ',new BaseElement(elements));
 
 new Food(new BaseElement(elements));
-//console.log('create object by constructor Food in index.js ',new Food(new BaseElement(elements)));
+console.log('create object by constructor Food in index.js ',new Food(new BaseElement(elements)));
 
 //console.log(new SnakePart());
 //console.log(new Snake());
