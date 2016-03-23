@@ -1,7 +1,8 @@
 'use strict';
 
 // code Olegnd 
-// version 2
+/*
+//_____________version 2_______________________________________________________________________________
 
 module.exports = function BaseElement(elements) {
 if (elements === undefined) {
@@ -17,13 +18,9 @@ else {
         elements.isVisible === undefined ? this.isVisible = true : this.isVisible = elements.isVisible;
     }
 }
-//console.log('in constructor BaseElement.js x = '+this.x+',y = '+this.y+',isVisible = '+this.isVisible);
 };
-
-
-//console.log(this.isVisible + '  invisible');
-/*
-// version 1
+*/
+//_____________version 1_______________________________________________________________________________
 
 module.exports = function BaseElement (element) {
 if (element === undefined) { 
@@ -59,6 +56,6 @@ else {
     }
 }
 };
-*/
+
 
 
