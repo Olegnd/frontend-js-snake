@@ -11,7 +11,7 @@ console.log('specified in idex.js x = '+elements.x+',y = '+elements.y+',isVisibl
 //new BaseElement(elements);
 //console.log(new BaseElement(elements));
 
-new Food(new BaseElement(elements));
+new Food(elements);
 //console.log('create object by constructor Food in index.js ',new Food(new BaseElement(elements)));
 
 //console.log(new SnakePart());
