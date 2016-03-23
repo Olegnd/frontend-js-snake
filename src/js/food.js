@@ -14,14 +14,18 @@ function BaseElement(elements) {
 
 console.log('create object by constructor BaseElement in Food.js  ',new BaseElement(elements));
     
-    BaseElement.prototype.feed = function(){
-        this.isVisible = false;
+BaseElement.prototype.feed = function(){
+    this.isVisible = false;
     }
-
-console.log('create object by constructor BaseElement with method feed in Food.js  ',
-            new BaseElement(elements));
+function Food(elements){
+    BaseElement.call(this,elements);
+}
     
-Food.prototype = Object.create(new BaseElements.prototype);    
+
+console.log('create object by constructor Food with method feed from in Food.js  ',
+            new Food(elements));
+    
+Food.prototype = Object.create(BaseElements.prototype);    
 Food.prototype.constructor = Food;
 }
     
