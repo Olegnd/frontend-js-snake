@@ -4,71 +4,30 @@
 //BaseElement = require('./js/base.element.js');
 
 module.exports = function Food(elements){
+console.log('import object in Food ',elements);
+
+function BaseElement(elements) {    
     this.x = elements.x;
     this.y = elements.y;
-    this.isVisible = false;
+    this.isVisible = elements.isVisible;
 }
 
-/*
-BaseElement.prototype.feed = function(){
-    this.isVisible = false;
-}
+console.log('create object by constructor BaseElement in Food.js  ',new BaseElement(elements));
+    
+    BaseElement.prototype.feed = function(){
+        this.isVisible = false;
+    }
 
-function Food(){
-  BaseElement.call(this,x,y,isVisible);
-}
-Food.prototype = Object.create(BaseElement.prototype); 
+console.log('create object by constructor BaseElement with method feed in Food.js  ',
+            new BaseElement(elements));
+    
+Food.prototype = Object.create(new BaseElements.prototype);    
 Food.prototype.constructor = Food;
-module.exports = Food;
-
-
-/*
-//Наследование в конструкторах
-
-function Vehicle(color) {
- this.color = color; 
- this.speed = 0;
- }   
-
-Vehicle.prototype.drive = function() { 
- this.speed = 40; 
 }
+    
+    
 
-function Car(brand, color) { 
- Vehicle.call(this, color); 
- this.brand = brand; 
- this.wheels = 4; 
-}   
-
-Car.prototype = Object.create(Vehicle.prototype); 
-Car.prototype.constructor = Car;
-*/
+    
 
 
-/*
-// ________________________________________
-
-var vehicle = {
-  color: 'white',
-  engine: true
-}
-
-var car1 = Object.create(vehicle);
-var car2 = Object.create(vehicle);
-var superCar = Object.create(car1);
-
-car1.speed = 60;
-car1.seats = 4;
-car2.speed = 100;
-
-car2.seats = 2;
-car2.color = 'green';
-
-console.log(superCar.speed)
-console.log(car2.color)
-
-
-
-console.dir()
-*/
 
