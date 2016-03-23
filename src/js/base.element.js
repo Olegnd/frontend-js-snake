@@ -17,7 +17,7 @@ else {
         elements.isVisible === undefined ? this.isVisible = true : this.isVisible = elements.isVisible;
     }
 }
-console.log('in constructor BaseElement.js x = '+this.x+',y = '+this.y+',isVisible = '+this.isVisible);
+//console.log('in constructor BaseElement.js x = '+this.x+',y = '+this.y+',isVisible = '+this.isVisible);
 };
 
 
