@@ -4,7 +4,9 @@
 /*
 //_____________version 2_______________________________________________________________________________
 
-module.exports = function BaseElement(elements) {
+var BaseElement,
+    feed; 
+BaseElement = function(elements) {
 if (elements === undefined) {
     this.x = 0; this.y = 0; this.isVisible = true;
 }
@@ -18,11 +20,18 @@ else {
         elements.isVisible === undefined ? this.isVisible = true : this.isVisible = elements.isVisible;
     }
 }
-};
-*/
+}
+BaseElement.prototype.feed = function(){
+                                this.isVisible = false;
+                             }
+module.exports = BaseElement;*/
+
+
 //_____________version 1_______________________________________________________________________________
 
-module.exports = function BaseElement (element) {
+var BaseElement,
+    feed; 
+BaseElement = function (element) {
 if (element === undefined) { 
     this.x = 0;
     this.y = 0;  
@@ -47,7 +56,7 @@ else {
         else {
             this.y = element.y;
         }
-        if (element.isVisible === undefined) {
+        if (element.isVisible === undefined && element.isVisible !== true) {
             this.isVisible = true;
         }
         else {
@@ -56,6 +65,11 @@ else {
     }
 }
 };
+
+BaseElement.prototype.feed = function(){
+                                this.isVisible = false;
+                             }
+module.exports = BaseElement;
 
 
 

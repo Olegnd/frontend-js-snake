@@ -1,19 +1,9 @@
 'use strict';
 // code Olegnd
-function BaseElement(elements) {
-    this.x = elements.x;
-    this.y = elements.y;
-    this.isVisible = elements.isVisible; 
-}
-BaseElement.prototype.feed = function(){
-                                this.isVisible = false;
-                             }
-
-
+var BaseElement = require('../../src/js/base.element.js');
 function Food(elements){
     BaseElement.call(this,elements);
-    this.x = elements.x;
-    this.y = elements.y;
+    BaseElement.prototype.feed.call(this,elements);
 }
 Food.prototype = Object.create(BaseElement.prototype);
 Food.prototype.constructor = Food;
