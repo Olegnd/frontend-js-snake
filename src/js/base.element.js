@@ -1,6 +1,7 @@
 'use strict';
 
 // code Olegnd 
+
 /*
 //_____________version 2_______________________________________________________________________________
 
@@ -73,6 +74,8 @@ BaseElement.prototype.feed = function(){
                                 this.isVisible = false;
                              }
 module.exports = BaseElement;
+
+
 
 
 

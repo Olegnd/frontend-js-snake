@@ -11,7 +11,7 @@ var Food = require('./js/food.js');
 //________________________________________________________________________________________________________
 
 var elements1 = {x : undefined,y : undefined,isVisible : undefined};
-var elements2 = {x : 10,y : 20};
+var elements2 = {x : 5,y : 15};
 console.log('specified elements1 in index.js                        : ',elements1);
 console.log('object created by constructor BaseElement from elements1 in index.js : ',new BaseElement(elements1));
 console.log('______________________________________________________________________________________________________________________')
