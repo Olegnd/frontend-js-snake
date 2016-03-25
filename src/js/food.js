@@ -1,9 +1,8 @@
 'use strict';
 // code Olegnd
-var BaseElement = require('../../src/js/base.element.js');
-function Food(elements){
-    BaseElement.call(this,elements);
-    BaseElement.prototype.feed.call(this,elements);
+var BaseElement = require('./base.element.js');
+function Food(element){
+    BaseElement.call(this,element);
 }
 Food.prototype = Object.create(BaseElement.prototype);
 Food.prototype.constructor = Food;

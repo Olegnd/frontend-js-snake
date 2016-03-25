@@ -57,14 +57,11 @@ else {
         else {
             this.y = element.y;
         }
-        if (element.isVisible !== Boolean) {
+        if (element.isVisible === undefined) {
             this.isVisible = true;
         }
         else { 
-            if (element.isVisible === false) {
-                this.isVisible = true;
-            }
-                
+              this.isVisible = element.isVisible;
         }
     }
 }
