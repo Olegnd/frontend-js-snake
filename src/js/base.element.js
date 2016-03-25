@@ -1,7 +1,6 @@
 'use strict';
 
 // code Olegnd 
-
 /*
 //_____________version 2_______________________________________________________________________________
 
@@ -26,7 +25,6 @@ BaseElement.prototype.feed = function(){
                                 this.isVisible = false;
                              }
 module.exports = BaseElement;*/
-
 
 //_____________version 1_______________________________________________________________________________
 
@@ -65,6 +63,7 @@ else {
         }
     }
 }
+//BaseElement.prototype.feed.call(this,element);
 };
 
 BaseElement.prototype.feed = function(){
