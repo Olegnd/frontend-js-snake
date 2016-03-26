@@ -28,9 +28,7 @@ module.exports = BaseElement;*/
 
 //_____________version 1_______________________________________________________________________________
 
-var BaseElement,
-    feed; 
-BaseElement = function (element) {
+var BaseElement = function(element) {
 if (element === undefined) { 
     this.x = 0;
     this.y = 0;  
@@ -63,13 +61,11 @@ else {
         }
     }
 }
-//BaseElement.prototype.feed.call(this,element);
 };
-
-BaseElement.prototype.feed = function(){
-                                this.isVisible = false;
-                             }
+BaseElement.prototype.constructor = BaseElement;
 module.exports = BaseElement;
+ 
+
 
 
 
