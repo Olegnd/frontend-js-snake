@@ -61,13 +61,6 @@ else {
         }
     }
 }
-};
+}
 BaseElement.prototype.constructor = BaseElement;
 module.exports = BaseElement;
- 
-
-
-
-
-
-

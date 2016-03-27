@@ -6,9 +6,6 @@ var Food,
     
 Food = function (element){
     BaseElement.call(this,element);
-//    this.x = element.x;
-//    this.y = element.y;
-//    Food.prototype.feed.call(this,element);
 }
 Food.prototype.feed = function(){
                                 this.isVisible = false;
@@ -18,5 +15,10 @@ Food.prototype.constructor = Food;
 
 module.exports = Food
 
+/*
+//    this.x = element.x;
+//    this.y = element.y;
+//    Food.prototype.feed.call(this,element);
 //module.exports.Food = Food;
 //module.exports.feed = feed;
+*/

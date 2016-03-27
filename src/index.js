@@ -8,6 +8,8 @@ var Snake = require('./js/snake.js');
 //console.log(new Food());
 //console.log(new SnakePart());
 //console.log(new Snake());
+
+
 //___________________test parameters________________________________________________________________________________________
 
 var element1 = {x: 1, y: 0, isVisible: true};
@@ -147,7 +149,5 @@ SnakePart.prototype.move = function(){
 }
 SnakePart.prototype = Object.create(BaseElement.prototype);
 SnakePart.prototype.constructor = SnakePart;
+
 */
-
-
-

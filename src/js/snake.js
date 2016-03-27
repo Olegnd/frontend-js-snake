@@ -1,5 +1,6 @@
 'use strict';
 // code Olegnd
+
 var SnakePart = require('./snake.part.js');
 var Food      = require('./food.js');
 module.exports = function Snake(parametrs){
@@ -31,6 +32,4 @@ if(parametrs.lengthSnake === 1) {
 //console.log('snakePart = ',snakePart);
 //console.log('part = ',part);    
 }
-
-    
 }
