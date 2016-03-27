@@ -4,7 +4,6 @@
 var BaseElement = require('./base.element.js');
 var SnakePart,
     move;
-
 SnakePart = function(element,direction,steps) {
     BaseElement.call(this,element);
     if(direction.direction === undefined) {

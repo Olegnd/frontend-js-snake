@@ -4,7 +4,6 @@
 var SnakePart = require('./snake.part.js');
 var Food      = require('./food.js');
 module.exports = function Snake(parametrs){
-
 var snakePart        = {},
     element          = {},
     direction        = {},

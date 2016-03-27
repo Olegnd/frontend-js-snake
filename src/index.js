@@ -9,7 +9,6 @@ var Snake = require('./js/snake.js');
 //console.log(new SnakePart());
 //console.log(new Snake());
 
-
 //___________________test parameters________________________________________________________________________________________
 
 var element1 = {x: 1, y: 0, isVisible: true};

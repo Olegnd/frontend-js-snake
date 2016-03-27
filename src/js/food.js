@@ -3,7 +3,6 @@
 var BaseElement = require('./base.element.js');
 var Food,
     feed;
-    
 Food = function (element){
     BaseElement.call(this,element);
 }
