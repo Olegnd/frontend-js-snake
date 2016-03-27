@@ -1,57 +1,67 @@
 'use strict';
 
-//var BaseElement = require('./js/base.element.js');
-//var Food = require('./js/food.js');
-//var SnakePart = require('./js/snake.part.js');
-//var Snake = require('./js/snake.js');
+var BaseElement = require('./js/base.element.js');
+var Food = require('./js/food.js');
+var SnakePart = require('./js/snake.part.js');
+var Snake = require('./js/snake.js');
 //console.log(new BaseElement());
 //console.log(new Food());
 //console.log(new SnakePart());
 //console.log(new Snake());
 //___________________test parameters________________________________________________________________________________________
 
-var element1 = {x : 5,y : 5,isVisible : true};
+var element1 = {x: 1, y: 0, isVisible: true};
 var baseElement1;
 
-var element2 = {x : 10,y : 10};
+var element2 = {x: 1, y: 0};
 var food2;
 
 var snakePart2_1, snakePart2_2, snakePart2_3, snakePart2_4;
-var directionRight = {direction : 'right'};
-var directionLeft  = {direction : 'left'};
-var directionUp    = {direction : 'up'};
-var directionDown  = {direction : 'down'};
-var step           = {steps : 10};
+var directionRight = {direction: 'right'};
+var directionLeft  = {direction: 'left'};
+var directionUp    = {direction: 'up'};
+var directionDown  = {direction: 'down'};
+var step           = {steps: 0};
 //___________________test constructor BaseElement___________________________________________________________________________
 baseElement1 = new BaseElement(element1);
-console.log('specified elements1 in index.js                  : ',element1);
-console.log('by constr BaseElement from elements1 in index.js : ',baseElement1);
+console.log('specified elements1                       : ',element1);
+console.log('by constr BaseElement from elements1      : ',baseElement1);
 console.log('______________________________________________________________________________________________________________________');
 //___________________test constructor Food__________________________________________________________________________________
 food2 = new Food(element2);
 //Food.feed();
 //food2 = new food.Food(element2);
 //food.FoodFeed();
-console.log('specified element2 in index.js                   : ',element2);
-console.log('by constr Food from element2 in index.js         : ',food2);
+console.log('specified element2                        : ',element2);
+console.log('by constr Food from element2              : ',food2);
 console.log('______________________________________________________________________________________________________________________');
 //___________________test constructor SnakePart_____________________________________________________________________________
 snakePart2_1 = new SnakePart(element2,directionRight,step);
 snakePart2_2 = new SnakePart(element2,directionLeft,step);
 snakePart2_3 = new SnakePart(element2,directionUp,step);
 snakePart2_4 = new SnakePart(element2,directionDown,step);
-console.log('specified element2 in index.js                   : ',element2);
-console.log('specified directionRight in index.js             : ',directionRight);
-console.log('specified directionRight in index.js             : ',directionLeft);
-console.log('specified directionRight in index.js             : ',directionUp);
-console.log('specified directionRight in index.js             : ',directionDown);
-console.log('step                                             : ',step);
-console.log('by constr SnakePart from element2 in index.js    : ',snakePart2_1);
-console.log('by constr SnakePart from element2 in index.js    : ',snakePart2_2);
-console.log('by constr SnakePart from element2 in index.js    : ',snakePart2_3);
-console.log('by constr SnakePart from element2 in index.js    : ',snakePart2_4);
+console.log('specified element2                        : ',element2);
+console.log('specified directionRight                  : ',directionRight);
+console.log('specified directionRight                  : ',directionLeft);
+console.log('specified directionRight                  : ',directionUp);
+console.log('specified directionRight                  : ',directionDown);
+console.log('step                                      : ',step);
+console.log('by constr SnakePart from element2         : ',snakePart2_1);
+//console.log('by constr SnakePart from element2         : ',snakePart2_2);
+//console.log('by constr SnakePart from element2         : ',snakePart2_3);
+//console.log('by constr SnakePart from element2         : ',snakePart2_4);
+console.log('______________________________________________________________________________________________________________________');
 
-//__________________________constructor BaseElement_______________________________________________________
+//___________________test constructor Snake_________________________________________________________________________________
+
+var parametrsSnake1 = {lengthSnake: 1, directionSnake: 'right'};
+var snake1 = new Snake(parametrsSnake1);
+console.log('specified parametrsSnake1                 : ',parametrsSnake1);
+console.log('Snake from parametrsSnake1                : ',snake1);
+
+
+/*
+//__________________________constructor BaseElement_________________________________________________________________________
 function BaseElement(element) {
 if (element === undefined) { 
     this.x = 0;
@@ -137,7 +147,7 @@ SnakePart.prototype.move = function(){
 }
 SnakePart.prototype = Object.create(BaseElement.prototype);
 SnakePart.prototype.constructor = SnakePart;
-
+*/
 
 
 
