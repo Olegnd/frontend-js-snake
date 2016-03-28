@@ -13,7 +13,6 @@ SnakePart = function(element) {
     else {
     this.direction = element.direction;
     }
-    SnakePart.prototype.move.call(this,element);
 }
 
 SnakePart.prototype.move = function(steps){
