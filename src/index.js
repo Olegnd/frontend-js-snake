@@ -21,16 +21,16 @@ var food2;
 
 //___________________test constructor BaseElement___________________________________________________________________________
 baseElement1 = new BaseElement(element1);
-console.log('specified elements1                       : ',element1);
-console.log('by constr BaseElement from elements1      : ',baseElement1);
+console.log('specified elements1                  : ',element1);
+console.log('by constr BaseElement from elements1 : ',baseElement1);
 console.log('______________________________________________________________________________________________________________________');
 //___________________test constructor Food__________________________________________________________________________________
 food2 = new Food(element2);
 //Food.feed();
 //food2 = new food.Food(element2);
 //food.FoodFeed();
-console.log('specified element2                        : ',element2);
-console.log('by constr Food from element2              : ',food2);
+console.log('specified element2                   : ',element2);
+console.log('by constr Food from element2         : ',food2);
 console.log('______________________________________________________________________________________________________________________');
 //___________________test constructor SnakePart_____________________________________________________________________________
 var snakePart3_1, snakePart3_2, snakePart3_3, snakePart3_4;
@@ -40,27 +40,21 @@ element3.direction = 'right';
 
 
 snakePart3_1 = new SnakePart(baseElement1);
-//snakePart2_2 = new SnakePart(baseElement1,directionLeft,step);
-//snakePart2_3 = new SnakePart(baseElement1,directionUp,step);
-//snakePart2_4 = new SnakePart(baseElement1,directionDown,step);
-console.log('specified element3                        : ',element3);
-//console.log('specified directionRight                  : ',directionRight);
-//console.log('specified directionRight                  : ',directionLeft);
-//console.log('specified directionRight                  : ',directionUp);
-//console.log('specified directionRight                  : ',directionDown);
-console.log('by constr SnakePart from element3         : ',snakePart3_1);
-//console.log('by constr SnakePart from element2         : ',snakePart2_2);
-//console.log('by constr SnakePart from element2         : ',snakePart2_3);
-//console.log('by constr SnakePart from element2         : ',snakePart2_4);
+
+console.log('specified element3                   : ',element3);
+console.log('by constr SnakePart from element3    : ',snakePart3_1);
 console.log('______________________________________________________________________________________________________________________');
 
 //___________________test constructor Snake_________________________________________________________________________________
-/*
-var parametrsSnake1 = {lengthSnake: 1, directionSnake: 'right'};
-var snake1 = new Snake(parametrsSnake1);
-console.log('specified parametrsSnake1                 : ',parametrsSnake1);
-console.log('Snake from parametrsSnake1                : ',snake1);
-*/
+
+var snake1 = {},
+    element4 = {};
+    element4 = snakePart3_1;
+    element4.length = 1;
+    snake1 = new Snake(element4);
+    
+console.log('specified element4                   : ',element4);
+console.log('by constr Snake from element4        : ',snake1);
 
 /*
 //__________________________constructor BaseElement_________________________________________________________________________
