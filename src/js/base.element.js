@@ -2,7 +2,6 @@
 
 // code Olegnd 
 /*
-
 //___________________________________version 2______________________________________________________________________________
 
 var BaseElement,
@@ -63,5 +62,5 @@ else {
     }
 }
 }
-BaseElement.prototype.constructor = BaseElement;
+
 module.exports = BaseElement;
