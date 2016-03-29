@@ -8,10 +8,10 @@ var Snake = require('./js/snake.js');
 //console.log(new Food());
 //console.log(new SnakePart());
 //console.log(new Snake());
-
+/*
 //___________________test parameters________________________________________________________________________________________
 
-var element1 = {x: 1, y: 0, isVisible: true};
+var element1 = {x: 2, y: 0, isVisible: true};
 var baseElement1;
 
 var element2 = {x: 1, y: 0};
@@ -43,18 +43,17 @@ snakePart3_1 = new SnakePart(baseElement1);
 
 console.log('specified element3                   : ',element3);
 console.log('by constr SnakePart from element3    : ',snakePart3_1);
-console.log('______________________________________________________________________________________________________________________');
+console.log('______________________________________________________________________________________________________________________');*/
 
 //___________________test constructor Snake_________________________________________________________________________________
 
-var snake1 = {},
-    element4 = {};
-    element4 = snakePart3_1;
-    element4.length = 1;
-    snake1 = new Snake(element4);
-    
+var snake1,
+    element4 = {direction: 'left', length: 3, steps: 5};
+snake1 = new Snake(element4);
+
 console.log('specified element4                   : ',element4);
 console.log('by constr Snake from element4        : ',snake1);
+
 
 /*
 //__________________________constructor BaseElement_________________________________________________________________________
