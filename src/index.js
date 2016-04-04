@@ -28,10 +28,10 @@ console.log('by constr Food from element2         : ',foodElement2);
 console.log('______________________________________________________________________________________________________________________');
 //___________________test constructor SnakePart_____________________________________________________________________________
 var snakePart3_1, snakePart3_2, snakePart3_3, snakePart3_4;
-var element3_1 = {x: 10, y: 5,isVisible: true,direction: 'right'},
-    element3_2 = {x: 10, y: undefined,isVisible: undefined,direction: 'left'},
-    element3_3 = {x: undefined, y: 5,isVisible: false,direction: 'down'},
-    element3_4 = {x: undefined, y: undefined,isVisible: undefined,direction: 'up'};
+var element3_1 = {x: 10, y: 5, isVisible: true, direction: 'right'},
+    element3_2 = {x: 10, y: undefined, isVisible: undefined,direction: 'left'},
+    element3_3 = {x: undefined, y: 5, isVisible: false, direction: 'down'},
+    element3_4 = {x: undefined, y: undefined, isVisible: undefined, direction: 'up'};
 var snakeMethod   = new Snake(element3_1);
 snakeMethod.eat();
 
@@ -55,7 +55,7 @@ console.log('___________________________________________________________________
 var snake1,
     snake2,
     element4 = {direction: undefined, length: 2},
-    element5 = {x: 10, y: 5,isVisible: true,direction: 'up', length: 5};
+    element5 = {x: 10, y: 5, isVisible: true, direction: 'up', length: 5};
 snake1 = new Snake(element4);
 snake2 = new Snake(element5);
 

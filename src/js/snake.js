@@ -11,9 +11,10 @@ var head  = [],
     parts = [],
     directionHead,
     indexLength = 0,
+    steps       = 1,
     indexSteps  = 0;
 SnakePart.call(this,element);
-this.length    = element.length;
+this.length = element.length;
 
 }
 Snake.prototype = Object.create(SnakePart.prototype);
