@@ -18,7 +18,7 @@ this.length    = element.length;
 }
 Snake.prototype = Object.create(SnakePart.prototype);
 
-eat = function() {
+Snake.prototype.eat = function() {
     
 }
 
