@@ -19,8 +19,8 @@ console.log('___________________________________________________________________
 //___________________test constructor Food__________________________________________________________________________________
 var element2 = {x: undefined, y: 2};
 var foodElement2 = new Food(element2);
-//var foodFunction = Food();
-//foodFunction.feed();
+var foodFunction = new Food();
+foodFunction.feed();
 
 //food2 = new food.Food(element2);
 //food.FoodFeed();
