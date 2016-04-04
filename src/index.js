@@ -3,57 +3,61 @@
 var BaseElement = require('./js/base.element.js');
 var Food = require('./js/food.js');
 var SnakePart = require('./js/snake.part.js');
-var Snake = require('./js/snake.js');
+//var Snake = require('./js/snake.js');
 //console.log(new BaseElement());
 //console.log(new Food());
 //console.log(new SnakePart());
 //console.log(new Snake());
-/*
-//___________________test parameters________________________________________________________________________________________
-
-var element1 = {x: 2, y: 0, isVisible: true};
-var baseElement1;
-
-var element2 = {x: 1, y: 0};
-var food2;
-
-
 
 //___________________test constructor BaseElement___________________________________________________________________________
+var element1 = {x: undefined, y: 2, isVisible: true};
+var baseElement1;
 baseElement1 = new BaseElement(element1);
 console.log('specified elements1                  : ',element1);
 console.log('by constr BaseElement from elements1 : ',baseElement1);
 console.log('______________________________________________________________________________________________________________________');
 //___________________test constructor Food__________________________________________________________________________________
-food2 = new Food(element2);
-//Food.feed();
+var element2 = {x: undefined, y: 2};
+var foodElement2 = new Food(element2);
+//var foodFunction = Food();
+//foodFunction.feed();
+
 //food2 = new food.Food(element2);
 //food.FoodFeed();
 console.log('specified element2                   : ',element2);
-console.log('by constr Food from element2         : ',food2);
+console.log('by constr Food from element2         : ',foodElement2);
 console.log('______________________________________________________________________________________________________________________');
 //___________________test constructor SnakePart_____________________________________________________________________________
 var snakePart3_1, snakePart3_2, snakePart3_3, snakePart3_4;
-var element3 = {};
-element3 = baseElement1;
-element3.direction = 'right';
+var element3_1 = {direction: 'right'},
+    element3_2 = {direction: 'left'},
+    element3_3 = {direction: 'down'},
+    element3_4 = {direction: 'up'};
 
+snakePart3_1 = new SnakePart(element3_1);
+snakePart3_2 = new SnakePart(element3_2);
+snakePart3_3 = new SnakePart(element3_3);
+snakePart3_4 = new SnakePart(element3_4);
 
-snakePart3_1 = new SnakePart(baseElement1);
-
-console.log('specified element3                   : ',element3);
-console.log('by constr SnakePart from element3    : ',snakePart3_1);
-console.log('______________________________________________________________________________________________________________________');*/
+console.log('specified element3_1                 : ',element3_1);
+console.log('by constr SnakePart from element3_1  : ',snakePart3_1);
+console.log('specified element3_2                 : ',element3_2);
+console.log('by constr SnakePart from element3_2  : ',snakePart3_2);
+console.log('specified element3_3                 : ',element3_3);
+console.log('by constr SnakePart from element3_3  : ',snakePart3_3);
+console.log('specified element3_4                 : ',element3_4);
+console.log('by constr SnakePart from element3_4  : ',snakePart3_4);
+console.log('______________________________________________________________________________________________________________________');
 
 //___________________test constructor Snake_________________________________________________________________________________
-
+/*
 var snake1,
-    element4 = {direction: 'left', length: 3, steps: 5};
+    element4 = {x: 1, y: 0,isVisible: true, direction: 'right', length: 2, steps: 1};
 snake1 = new Snake(element4);
 
-console.log('specified element4                   : ',element4);
-console.log('by constr Snake from element4        : ',snake1);
-
+console.log('specified element4            : ',element4);
+console.log('by constr Snake from element4 : ',snake1);
+*/
 
 /*
 //__________________________constructor BaseElement_________________________________________________________________________

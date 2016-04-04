@@ -4,41 +4,43 @@
 //var SnakePart = require('./snake.part.js');
 //var Food      = require('./food.js');
 module.exports = function Snake(element){
-var head = [],
+var head  = [],
     parts = [],
     directionHead,
     indexLength = 0,
     indexSteps  = 0; 
-console.log('element  = ',element);
-if (element.steps > 0) { 
+if (element.steps > 0 && element.length > 0) { 
+    this.x         = element.x;
+    this.y         = element.y;
+    this.isVisible = element.isVisible;
     while(indexSteps <= element.steps) {
-        switch(element.length) {
-            case 0:
-                this.x         = 0;
-                this.y         = 0;
-                this.isVisible = true;
-                this.direction = undefined;
-                head           = [];
-                parts          = head;
-                this.snake     = parts;
-                directionHead  = element.direction;
+       switch(element.direction) {
+            case 'right':
+               this.direction = element.direction;
+               directionHead  = this.direction;
+               while(indexLength < element.length) {
+                   this.x = this.x + indexLength + element.steps;
+                   this.y = this.y;
+                   parts[indexLength] = [this.x, this.y];
+                   head               = [this.x, this.y];
+                   this.snake         = parts;
+                   indexLength        = indexLength + 1;
+               }
+               
+            break;
+            case 'left':
+               this.direction = element.direction;
+               directionHead  = this.direction;
+               while(indexLength < element.length) {
+                   this.x = this.x - (indexLength + indexSteps) + element.length;
+                   this.y = this.y;
+                   parts[indexLength] = [this.x, this.y];
+                   head               = [this.x, this.y];
+                   this.snake         = parts;
+                   indexLength        = indexLength + 1;
+               }
             break;
 
-            default:
-                switch(element.direction) {
-                    case 'right':
-                        this.isVisible = true;
-                        this.direction = element.direction;
-                        while(indexLength < element.length) {
-                            this.x = indexLength + element.steps;
-                            this.y = 0;
-                            parts[indexLength] = [this.x, this.y];
-                            indexLength = indexLength + 1;
-                        } 
-                        head          = [this.x, this.y];
-                        this.snake    = parts;
-                        directionHead = element.direction;
-                    break;
                     case 'down':
                         this.isVisible = true;
                         while(indexLength < element.length - 1) {
@@ -67,39 +69,38 @@ if (element.steps > 0) {
                         this.snake    = parts;
                         directionHead = element.direction;
                     break;
-                    case 'left':
-                        this.isVisible = true;
-                        this.direction = element.direction;
-                        while(indexLength < element.length) {
-                            this.x = indexLength - 1 - element.steps;
-                            this.y = 0;
-                            parts[indexLength] = [this.x, this.y];
-                            indexLength = indexLength + 1;
-                        } 
-                        head          = [this.x, this.y];
-                        this.snake    = parts;
-                        directionHead = element.direction;
-                    break;
+                    
                 }
+            indexSteps = indexSteps + 1;
         }
-    console.log('snake in snake.js                    : ',this.snake);
-    console.log('now directionHead in snake.js        : ',directionHead);
-
-        indexSteps = indexSteps + 1;
-    }
 }
-else {
+
+else { 
+    if (element.steps === 0 && element.length > 0) {
     this.isVisible = true;
     this.direction = element.direction;
+    directionHead  = this.direction;
+    this.steps     = element.steps;
     while(indexLength < element.length) {
-        this.x = indexLength + element.steps;
+        this.x = 1 + indexLength + element.steps;
         this.y = 0;
         parts[indexLength] = [this.x, this.y];
+        head = [this.x, this.y]
+        this.snake = parts;
         indexLength = indexLength + 1;
-    } 
-    head          = [this.x, this.y];
-    this.snake    = parts;
-    directionHead = element.direction;
+    }
+    }
     
+    else {
+        this.direction = undefined;
+        head           = [];
+        parts          = head;
+        this.snake     = parts;
+        directionHead  = this.direction;
+    }
 }
+console.log('snake in snake.js                    : ',this.snake);
+console.log('now directionHead in snake.js        : ',directionHead);    
 }
+
+

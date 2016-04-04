@@ -6,10 +6,10 @@ var Food,
 Food = function (element){
     BaseElement.call(this,element);
 }
+Food.prototype = Object.create(BaseElement.prototype);
+
 Food.prototype.feed = function(){
                                 this.isVisible = false;
-                      } 
-Food.prototype = Object.create(BaseElement.prototype);
+                      }
 Food.prototype.constructor = Food;
-
 module.exports = Food
