@@ -3,7 +3,7 @@
 var BaseElement = require('./js/base.element.js');
 var Food = require('./js/food.js');
 var SnakePart = require('./js/snake.part.js');
-//var Snake = require('./js/snake.js');
+var Snake = require('./js/snake.js');
 //console.log(new BaseElement());
 //console.log(new Food());
 //console.log(new SnakePart());
@@ -19,11 +19,10 @@ console.log('___________________________________________________________________
 //___________________test constructor Food__________________________________________________________________________________
 var element2 = {x: undefined, y: 2};
 var foodElement2 = new Food(element2);
-var foodFunction = new Food();
-foodFunction.feed();
+var foodFeed = new Food();
+foodFeed.feed();
 
-//food2 = new food.Food(element2);
-//food.FoodFeed();
+
 console.log('specified element2                   : ',element2);
 console.log('by constr Food from element2         : ',foodElement2);
 console.log('______________________________________________________________________________________________________________________');
@@ -50,14 +49,14 @@ console.log('by constr SnakePart from element3_4  : ',snakePart3_4);
 console.log('______________________________________________________________________________________________________________________');
 
 //___________________test constructor Snake_________________________________________________________________________________
-/*
+
 var snake1,
-    element4 = {x: 1, y: 0,isVisible: true, direction: 'right', length: 2, steps: 1};
+    element4 = {direction: 'right', length: 2};
 snake1 = new Snake(element4);
 
 console.log('specified element4            : ',element4);
 console.log('by constr Snake from element4 : ',snake1);
-*/
+
 
 /*
 //__________________________constructor BaseElement_________________________________________________________________________

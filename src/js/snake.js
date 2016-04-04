@@ -1,18 +1,34 @@
 'use strict';
 // code Olegnd
-
-//var SnakePart = require('./snake.part.js');
+//var BaseElement = require('./base.element.js');
+var SnakePart = require('./snake.part.js');
 //var Food      = require('./food.js');
-module.exports = function Snake(element){
+var Snake,
+    eat;
+
+Snake = function(element){
 var head  = [],
     parts = [],
     directionHead,
     indexLength = 0,
-    indexSteps  = 0; 
+    indexSteps  = 0;
+SnakePart.call(this,element);
+this.length    = element.length;
+
+}
+Snake.prototype = Object.create(SnakePart.prototype);
+
+eat = function() {
+    
+}
+
+Snake.prototype.constructor = Snake;
+module.exports = Snake;
+
+
+/*    
 if (element.steps > 0 && element.length > 0) { 
-    this.x         = element.x;
-    this.y         = element.y;
-    this.isVisible = element.isVisible;
+   
     while(indexSteps <= element.steps) {
        switch(element.direction) {
             case 'right':
@@ -100,7 +116,5 @@ else {
     }
 }
 console.log('snake in snake.js                    : ',this.snake);
-console.log('now directionHead in snake.js        : ',directionHead);    
-}
-
-
+console.log('now directionHead in snake.js        : ',directionHead);
+*/
