@@ -19,26 +19,29 @@ console.log('___________________________________________________________________
 //___________________test constructor Food__________________________________________________________________________________
 var element2 = {x: undefined, y: 2};
 var foodElement2 = new Food(element2);
-var foodMethod = new Food();
-foodMethod.feed();
+
+foodElement2.feed();
 
 
 console.log('specified element2                   : ',element2);
 console.log('by constr Food from element2         : ',foodElement2);
 console.log('______________________________________________________________________________________________________________________');
+
 //___________________test constructor SnakePart_____________________________________________________________________________
-var snakePart3_1, snakePart3_2, snakePart3_3, snakePart3_4;
+var snakePart3_1, snakePart3_2, snakePart3_3, snakePart3_4, snakePart3_5;
 var element3_1 = {x: 10, y: 5, isVisible: true, direction: 'right'},
     element3_2 = {x: 10, y: undefined, isVisible: undefined,direction: 'left'},
     element3_3 = {x: undefined, y: 5, isVisible: false, direction: 'down'},
-    element3_4 = {x: undefined, y: undefined, isVisible: undefined, direction: 'up'};
-var snakeMethod   = new Snake(element3_1);
-snakeMethod.eat();
+    element3_4 = {x: undefined, y: undefined, isVisible: undefined, direction: 'up'},
+    element3_5 = {};
+var steps = 1;
 
 snakePart3_1 = new SnakePart(element3_1);
+snakePart3_1.move(steps);
 snakePart3_2 = new SnakePart(element3_2);
 snakePart3_3 = new SnakePart(element3_3);
 snakePart3_4 = new SnakePart(element3_4);
+snakePart3_5 = new SnakePart(element3_5);
 
 console.log('specified element3_1                 : ',element3_1);
 console.log('by constr SnakePart from element3_1  : ',snakePart3_1);
@@ -48,21 +51,27 @@ console.log('specified element3_3                 : ',element3_3);
 console.log('by constr SnakePart from element3_3  : ',snakePart3_3);
 console.log('specified element3_4                 : ',element3_4);
 console.log('by constr SnakePart from element3_4  : ',snakePart3_4);
+console.log('specified element3_5                 : ',element3_5);
+console.log('by constr SnakePart from element3_5  : ',snakePart3_5);
 console.log('______________________________________________________________________________________________________________________');
 
 //___________________test constructor Snake_________________________________________________________________________________
 
 var snake1,
     snake2,
-    element4 = {direction: undefined, length: 2},
-    element5 = {x: 10, y: 5, isVisible: true, direction: 'up', length: 5};
-snake1 = new Snake(element4);
-snake2 = new Snake(element5);
+    element4_1 = {length: 0, direction: 'right'},
+    element4_2 = {length: 5, direction: 'right'};
+var steps = 5;
 
-console.log('specified element4            : ',element4);
-console.log('by constr Snake from element4 : ',snake1);
-console.log('specified element5            : ',element5);
-console.log('by constr Snake from element5 : ',snake2);
+snake1 = new Snake(element4_1);
+snake2 = new Snake(element4_2);
+//var snakeMethod   = new Snake();
+//snakeMethod.eat();
+
+console.log('specified element4_1                 : ',element4_1);
+console.log('by constr Snake from element4_1      : ',snake1);
+console.log('specified element4_1                 : ',element4_2);
+console.log('by constr Snake from element4_2      : ',snake2);
 
 /*
 //__________________________constructor BaseElement_________________________________________________________________________
