@@ -14,6 +14,7 @@ SnakePart = function(element) {
     this.direction = 'right';
     }
 }
+
 SnakePart.prototype = Object.create(BaseElement.prototype);
 /*
 SnakePart.prototype.partDirection = function() {

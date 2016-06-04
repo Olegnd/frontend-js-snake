@@ -71,7 +71,7 @@ var snake1,
 
 snake1 = new Snake(element4_1);
 snake2 = new Snake(element4_2);
-snake2.eat();
+//snake2.eat();
 console.log('specified element4_1                 : ',element4_1);
 console.log('by constr Snake from element4_1      : ',snake1);
 console.log('head1                                : ',snake1.head);

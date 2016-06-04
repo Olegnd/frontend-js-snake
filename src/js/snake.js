@@ -14,6 +14,7 @@ var partSnake = [],
     y = 0,
     indexLength = 0,
     indexSnakeLenght = 0;
+
     config = config || {};
     if(config.direction === undefined) {
         config.direction = 'right';     
