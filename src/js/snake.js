@@ -75,3 +75,5 @@ Snake.prototype.move = function() {
 }
 
 module.exports = Snake;
+
+//____________________________________________________

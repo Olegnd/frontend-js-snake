@@ -16,10 +16,7 @@ SnakePart = function(element) {
 }
 
 SnakePart.prototype = Object.create(BaseElement.prototype);
-/*
-SnakePart.prototype.partDirection = function() {
-        this.direction = this.direction;
-}*/
+
 SnakePart.prototype.move = function(steps){
         if(steps > 0) {
             if(this.direction === 'right'){   
