@@ -1,5 +1,6 @@
 'use strict';
 // code Olegnd
+//
 var BaseElement = require('./base.element.js');
 var SnakePart,
     move;

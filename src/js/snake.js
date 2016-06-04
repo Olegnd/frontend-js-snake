@@ -3,7 +3,7 @@
 //var BaseElement = require('./base.element.js');
 //var Food      = require('./food.js');
 var SnakePart = require('./snake.part.js');
-
+// 
 var Snake,
     eat;
 Snake = function(config){
